@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'media';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Balsamiq Sans", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #161616;
+}
+li {
+    list-style: none;
+}
+.overflow {
+    display: none;
+    z-index: 1;
+    background-color: #000000cb;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+

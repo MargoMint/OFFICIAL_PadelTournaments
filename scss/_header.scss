@@ -1,0 +1,38 @@
+.header {
+    margin-top: 10px;
+    &__container {
+        display: flex;
+        gap: 115px;
+        align-items: center;
+    }
+    &__logo-img {
+        max-width: 70px;
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        min-width: 300px;
+    }
+    &__tournaments, &__about, &__contacts {
+        display: block;
+        position: relative;
+        padding: 4px 0;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s transform ease;
+            transform: scale3d(0,1,1);
+            transform-origin: 50% 50%;
+            background: #5494b4;
+        }
+        &:hover{
+            &::before {
+                transform: scale3d(1,1,1);
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel tournaments</title>
+    <link rel="shortcut icon" href="icons/favicon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo"><img class="header__logo-img" src="icons/label.png" alt="label"></a>
+            <ul class="header__links">
+                <li><a href="#" class="header__tournaments">Турниры</a></li>
+                <li><a href="#" class="header__about">Про нас</a></li>
+                <li><a href="#" class="header__contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container main__container">
+            <h2 class="main__title">Организуем турниры по паделу в формате «Американо»</h2>
+            <h4 class="main__subtitle">Каждый матч — новая стратегия, каждый турнир — новые друзья, яркие эмоции каждый раз</h4>
+
+            <form id="main__form">
+                <input type="text" id="mainInput" class="main__input" name="player name" placeholder="Ваша Фамилия">
+                <div><button disabled id="btn">Добавить</button></div>
+            </form>
+
+            <div class="players__display-none">
+                <ul class="players">
+                    <div class="players__title">Участники турнира</div>
+                </ul>
+            </div>
+
+            <div class="main__modal">
+                <div class="main__modal-content">
+                    <div class="main__modal-img"><img src="icons/tennis-ball.png" alt="tennis-ball"></div>
+                    <p class="main__modal-title">Достигнут лимит участников</p>
+                    <p class="main__modal-descr">К сожалению, все места для участия заняты. Следите за новыми турнирами и не упустите возможность присоединиться к следующему!</p>
+                    <img class="close" src="icons/close.png" alt="close">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">© 2024 Padel Event. Все права защищены.</p>
+            <div class="footer__links">
+
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/scripts.js"></script>
+</body>
+</html>
