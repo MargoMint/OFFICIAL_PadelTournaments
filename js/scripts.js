@@ -88,20 +88,20 @@ function generateSchedule() {
                 matches.push({ player1: playersArray[i], player2: playersArray[j] });
             };
         };
-    // Распределяем пары по раундам
+    
     for (let match of matches) {
         let player1 = match.player1;
         let player2 = match.player2;
-        // Пытаемся добавить матч в один из раундов
+        
         for (let round of rounds) {
             const player1HasPlayedThisRound = round.some(m => m.player1.id === player1.id || m.player2.id === player1.id);
             const player2HasPlayedThisRound = round.some(m => m.player1.id === player2.id || m.player2.id === player2.id);
-            // Оба игрока должны быть свободны в этом раунде
+            
             if (!player1HasPlayedThisRound && !player2HasPlayedThisRound
                 && player1.matchesPlayed < 7 && player2.matchesPlayed < 7
                 && !player1.opponents.has(player2.id) && !player2.opponents.has(player1.id)) {
                     round.push(match);
-                    // Обновляем количество сыгранных матчей и добавляем в список оппонентов
+                    
                     player1.matchesPlayed++;
                     player2.matchesPlayed++;
                     player1.opponents.add(player2.id);
@@ -132,7 +132,7 @@ function displaySchedule() {
 
         const closeMatchesListBtn = document.createElement('img');
         closeMatchesListBtn.classList.add('close');
-        closeMatchesListBtn.src = '../icons/close.png';
+        closeMatchesListBtn.src = 'icons/close.png';
         closeMatchesListBtn.style.marginTop = '5px';
         closeMatchesListBtn.style.marginRight = '5px';
         roundDiv.appendChild(closeMatchesListBtn);
@@ -160,14 +160,6 @@ function displaySchedule() {
         
     });
 };
-
-
-
-
-
-
-
-
 
 
 //закрытие модального окна, когда введено максимальное количество участников
